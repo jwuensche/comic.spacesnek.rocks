@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  web:
+    image: nginx
+    volumes: 
+      - /root/spacesnek.rocks:/usr/share/nginx/html:ro
+    ports: 
+      - 80:80
+    restart: unless-stopped
